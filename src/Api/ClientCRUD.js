@@ -13,6 +13,7 @@ export async function AgregarClient(datos){
                 'Content-Type':'application/json'
             }
         })
+        console.log(JSON.stringify(datos))
         await respuesta.json()
     } catch (error) {
         console.log(error)
