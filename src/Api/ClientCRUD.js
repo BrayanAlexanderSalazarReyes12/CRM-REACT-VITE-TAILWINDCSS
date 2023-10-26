@@ -1,5 +1,5 @@
 export async function ObtenerClient(){
-    const respuesta = await fetch(import.meta.env.VITE_API_URL)
+    const respuesta = await fetch(import.meta.env.VITE_API_DB)
     const resultado = await respuesta.json()
     return resultado
 }
