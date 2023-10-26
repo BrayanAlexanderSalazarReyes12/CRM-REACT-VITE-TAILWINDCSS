@@ -26,11 +26,9 @@ export async function action({request}) {
     return Errores
   }
 
-  console.log(JSON.stringify(datos))
+  await AgregarClient(datos)
   
-  //await AgregarClient(datos)
-  
-  //return redirect('/')
+  return redirect('/')
 }
 
 function NewClient() {
