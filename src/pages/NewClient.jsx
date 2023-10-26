@@ -26,7 +26,7 @@ export async function action({request}) {
     return Errores
   }
 
-  console.log(datos)
+  console.log(JSON.stringify(datos))
   
   //await AgregarClient(datos)
   
