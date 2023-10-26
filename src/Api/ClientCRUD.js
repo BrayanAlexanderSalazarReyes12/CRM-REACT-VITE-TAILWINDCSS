@@ -6,7 +6,7 @@ export async function ObtenerClient(){
 
 export async function AgregarClient(datos){
     try {
-        const respuesta = await fetch(import.meta.env.VITE_API_URL,{
+        const respuesta = await fetch(import.meta.env.VITE_API_DB,{
             method: 'POST',
             body: JSON.stringify(datos),
             headers:{
@@ -27,7 +27,7 @@ export async function EditarCliente(id){
 
 export async function ActualizarCliente(id,datos){
     try {
-        const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`,{
+        const respuesta = await fetch(`${import.meta.env.VITE_API_DB}/${id}`,{
             method: 'PUT',
             body: JSON.stringify(datos),
             headers:{
@@ -42,7 +42,7 @@ export async function ActualizarCliente(id,datos){
 
 export async function EliminarCliente(id){
     try {
-        const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`,{
+        const respuesta = await fetch(`${import.meta.env.VITE_API_DB}/${id}`,{
             method:'DELETE'
         })
         await respuesta.json()
