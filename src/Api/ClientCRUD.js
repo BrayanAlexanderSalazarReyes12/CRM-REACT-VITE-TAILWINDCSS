@@ -6,7 +6,7 @@ export async function ObtenerClient(){
 
 export async function AgregarClient(datos){
     try {
-        const respuesta = await fetch(import.meta.env.VITE_API_DB,{
+        const respuesta = await fetch(import.meta.env.VITE_API_DB_R,{
             method: 'POST',
             body: JSON.stringify(datos),
             headers:{
